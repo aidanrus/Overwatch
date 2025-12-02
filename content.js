@@ -1,3 +1,4 @@
+//detect where the youtube player is by waiting for it to spawn in
 function waitForVideo() {
     return new Promise(resolve => {
         const check = () => {
@@ -9,6 +10,7 @@ function waitForVideo() {
     });
 }
 
+// the overlay object itself
 function createOverlay() {
     let overlay = document.createElement("div");
     overlay.id = "yt-endtime-overlay";
@@ -16,29 +18,28 @@ function createOverlay() {
     return overlay;
 }
 
+//calculate end time and format it correctly
 function formatTime(date) {
     let hours = date.getHours();
     let minutes = date.getMinutes().toString().padStart(2, "0");
 
-    //let ampm = hours >= 12 ? "PM" : "AM";
-    //hours = (hours % 12) || 12;
+    let ampm = hours >= 12 ? "PM" : "AM";
+    hours = (hours % 12) || 12;
     
-    
-    
-
-    return `${hours}:${minutes}`;
+    return `${hours}:${minutes} ${ampm}`;
 }
 
 async function init() {
     const video = await waitForVideo();
 
-    // Find YouTube’s player container
+    // find YouTube’s player container
     const player = document.querySelector("#movie_player") || video.parentElement;
     if (!player) return;
 
     const overlay = createOverlay();
     player.appendChild(overlay);
 
+    //repeat every 1 seconds
     setInterval(() => {
         if (!video.duration) return;
 
@@ -49,4 +50,5 @@ async function init() {
     }, 1000);
 }
 
+//run   
 init();
