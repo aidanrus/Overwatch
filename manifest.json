@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Overwatch",
+  "version": "1.0",
+  "description": "Shows when the current YouTube video will end.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": []
+}
