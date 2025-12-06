@@ -33,5 +33,5 @@
     5. Make sure the Overwatch extension is enabled and refresh any pre-existing YouTube tabs
 ## License
 
-[MIT © Aidan Rus](https://choosealicense.com/licenses/mit/)
+[MIT © Aidan Rus](https://github.com/aidanrus/Overwatch?tab=MIT-1-ov-file)
 
