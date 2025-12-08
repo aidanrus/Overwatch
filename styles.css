@@ -7,7 +7,7 @@
   color: rgba(255, 255, 255, 0.159);
   padding: 6px 12px;
   border-radius: 8px;
-  font-size: 35px;
+  font-size: var(--scaled-text, 35px);
   font-family: Roboto, Arial, sans-serif;
   text-shadow: 2px 2px #3333334d;
   /* backdrop-filter: blur(4px); */

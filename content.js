@@ -10,7 +10,7 @@ function waitForVideo() {
     });
 }
 
-// the overlay object itself
+
 function createOverlay() {
     let overlay = document.createElement("div");
     overlay.id = "yt-endtime-overlay";
@@ -32,14 +32,18 @@ function formatTime(date) {
 async function init() {
     const video = await waitForVideo();
 
-    // find YouTube’s player container
     const player = document.querySelector("#movie_player") || video.parentElement;
     if (!player) return;
 
     const overlay = createOverlay();
+    
+    const fullscreen = document.querySelector("#movie_player") || video.parentElement;
+
+
+    overlay.style.setProperty('--scaled-text', ((player.clientWidth) * 0.02) + 'px')
     player.appendChild(overlay);
 
-    //repeat every 1 seconds
+
     setInterval(() => {
         if (!video.duration) return;
 
@@ -50,5 +54,5 @@ async function init() {
     }, 1000);
 }
 
-//run   
+ 
 init();
