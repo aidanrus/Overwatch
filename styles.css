@@ -1,13 +1,35 @@
 #yt-endtime-overlay {
+  --scaled-text-endtime: 30px;
+
   position: absolute;
-  top: 50%;
+  top: calc(50% - 20px);
   left: 50%;
   transform: translate(-50%, -50%);
   /* background: rgba(0, 0, 0, 0.45); */
   color: rgba(255, 255, 255, 0.159);
   padding: 6px 12px;
   border-radius: 8px;
-  font-size: var(--scaled-text, 35px);
+  font-size: var(--scaled-text-endtime);
+  font-family: Roboto, Arial, sans-serif;
+  text-shadow: 2px 2px #3333334d;
+  /* backdrop-filter: blur(4px); */
+  pointer-events: none;
+  z-index: 9999;
+}
+
+
+#yt-currenttime-overlay {
+  --scaled-text-currenttime: 25px;
+  
+  position: absolute;
+  top: calc(50% + 20px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: rgba(0, 0, 0, 0.45); */
+  color: rgba(255, 255, 255, 0.159);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: var(--scaled-text-currenttime);
   font-family: Roboto, Arial, sans-serif;
   text-shadow: 2px 2px #3333334d;
   /* backdrop-filter: blur(4px); */

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Overwatch",
-  "version": "1.4",
+  "version": "1.6",
   "description": "Shows when the current YouTube video will end.",
   "content_scripts": [
     {
@@ -11,5 +11,13 @@
       "run_at": "document_idle"
     }
   ],
+  
+  "icons": {
+    "16": "assets/overwatch16.png",
+    "32": "assets/overwatch32.png",
+    "48": "assets/overwatch48.png",
+    "128": "assets/overwatch128.png"
+  },
+  
   "permissions": []
 }
