@@ -16,7 +16,7 @@
 
 ## Features
 
-- Always visible where your content is. 
+- Always where your content is. 
 - Automatically adjusts contrast for visibility on both light and dark backgrounds. 
 - Customizable clock format. 
 
